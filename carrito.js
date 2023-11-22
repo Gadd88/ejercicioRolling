@@ -16,8 +16,8 @@ const buscarProducto = (str) => {
     let buscar = str;
     let encontrado = ''
     for (let i = 0; i < carrito.length; i++){
-        if (productos[i].toLowerCase() === buscar.toLowerCase()){
-            encontrado = productos[i]
+        if (carrito[i].toLowerCase() === buscar.toLowerCase()){
+            encontrado = carrito[i]
             console.log(encontrado)
         }
     }
@@ -42,13 +42,13 @@ const agregarProducto = (item) =>{
 }
 
 const listarProductos = () => { 
-  for (let i=0; i < carrito.lenght; i++){
+  for (let i=0; i < carrito.length; i++){
     console.log(carrito[i])
   } 
 }
 
 const filtrarProducto =(palabra)=>{
-    let resultado= productos.filter(producto => producto.toLowerCase().includes(palabra.toLowerCase()));
+    let resultado= carrito.filter(producto => producto.toLowerCase().includes(palabra.toLowerCase()));
     return console.log(resultado)
 }
 
