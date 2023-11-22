@@ -10,7 +10,17 @@
 // ● Filtrar productos que coincidan con una palabra, parte de ellalistar
 // o una letra
 // ● Eliminar producto del carrito
-let carrito = ['pan', 'aceite', 'gaseosa', 'gas']
+
+let carrito = ['pan', 'aceite', 'agua']
+
+const eliminarProducto = (str) =>{
+    let producto = str
+    let nuevoCarrito = carrito.filter(item => item.toLowerCase() !== producto.toLowerCase())
+    carrito = nuevoCarrito
+    console.log(carrito)
+}
+
+eliminarProducto('agua')
 
 const agregarProducto = (item) =>{
     let producto = item
@@ -23,14 +33,15 @@ const agregarProducto = (item) =>{
 }
 agregarProducto('carne')
 
-const listar = () => { 
+const listarProductos = () => { 
   for (let i=0; i < carrito.lenght; i++){
     console.log(carrito[i])
   } 
 }
 
-const filtrar =(palabra)=>{
+const filtrarProducto =(palabra)=>{
     let resultado= productos.filter(producto => producto.toLowerCase().includes(palabra.toLowerCase()));
     return console.log(resultado)
 }
 filtrar(palabra)
+
