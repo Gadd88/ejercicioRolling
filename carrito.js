@@ -8,3 +8,14 @@
 // ● Filtrar productos que coincidan con una palabra, parte de ella
 // o una letra
 // ● Eliminar producto del carrito
+
+let carrito = ['pan', 'aceite', 'agua']
+
+const eliminarProducto = (str) =>{
+    let producto = str
+    let nuevoCarrito = carrito.filter(item => item.toLowerCase() !== producto.toLowerCase())
+    carrito = nuevoCarrito
+    console.log(carrito)
+}
+
+eliminarProducto('agua')
