@@ -5,6 +5,14 @@
 // ● Agregar producto al carrito
 // ● Listar los productos del carrito
 // ● Buscar un producto en el carrito
-// ● Filtrar productos que coincidan con una palabra, parte de ella
-// o una letra
+// ● Filtrar productos que coincidan con una palabra, parte de ella una letra
 // ● Eliminar producto del carrito
+
+// ● Filtrar productos que coincidan con una palabra, parte de ella
+
+const filtrar =(palabra)=>{
+    let resultado= productos.filter(producto => producto.toLowerCase().includes(palabra.toLowerCase()));
+    return console.log(resultado)
+    
+}
+filtrar(palabra)
