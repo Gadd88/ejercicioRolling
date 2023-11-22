@@ -8,3 +8,15 @@
 // ● Filtrar productos que coincidan con una palabra, parte de ella
 // o una letra
 // ● Eliminar producto del carrito
+const buscarProducto = (str) => {
+    let buscar = str;
+    let encontrado = ''
+    for (let i = 0; i < carrito.length; i++){
+        if (productos[i].toLowerCase() === buscar.toLowerCase()){
+            encontrado = productos[i]
+            console.log(encontrado)
+        }
+    }
+    if(encontrado=='') console.log('No existe el producto')
+  }
+  buscarProducto('agua');
